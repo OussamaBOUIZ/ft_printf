@@ -6,7 +6,7 @@
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 18:29:00 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/24 21:19:35 by obouizga         ###   ########.fr       */
+/*   Updated: 2021/11/24 21:43:16 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@ char	first_arg_trv(const char *s)
 	{
 		if (*s == '%' && isalpha_f(*(s + 1)))
 		{
-			
-			i++;
+			ft_treat(*(s + 1));
+			s++;	
 		}
+		ft_putchar(*s);
 		s++;
 	}
 }
