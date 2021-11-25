@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   get_nargs.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 09:47:31 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/25 09:26:22 by obouizga         ###   ########.fr       */
+/*   Created: 2021/11/25 14:53:27 by obouizga          #+#    #+#             */
+/*   Updated: 2021/11/25 16:56:50 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-// int	ft_printf(const char *str)
-// {
-// 	ft_putstr(str);
-// 	return (0);
-// }
-
-int main(void)
+int get_nargs(const char *s)
 {
-	printf("Hello printf %XX\n", 56536);
-	// ft_printf("Hello ft_%%%%%printf\n");
-	return (0);
+	int	i;
+
+	i = 0;
+	while (*s)
+	{
+		if (*s == '%' && isalpha_f(*(s  + 1)))
+			i++;	
+		s++;
+	}
+	return (i);
 }
 

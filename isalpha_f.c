@@ -6,9 +6,11 @@
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 18:18:17 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/24 19:09:47 by obouizga         ###   ########.fr       */
+/*   Updated: 2021/11/25 14:59:37 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libftprintf.h"
 
 int	isalpha_f(char c)
 {

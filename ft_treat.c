@@ -1,27 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_treat.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 09:47:31 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/25 09:26:22 by obouizga         ###   ########.fr       */
+/*   Created: 2021/11/25 09:30:59 by obouizga          #+#    #+#             */
+/*   Updated: 2021/11/25 09:32:42 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-
-// int	ft_printf(const char *str)
-// {
-// 	ft_putstr(str);
-// 	return (0);
-// }
-
-int main(void)
+void	ft_treat(char c)
 {
-	printf("Hello printf %XX\n", 56536);
-	// ft_printf("Hello ft_%%%%%printf\n");
-	return (0);
+	if (c == 'c')
+		ft_putchar()
 }
-

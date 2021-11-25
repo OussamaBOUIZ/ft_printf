@@ -6,7 +6,7 @@
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:56:08 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/24 15:39:13 by obouizga         ###   ########.fr       */
+/*   Updated: 2021/11/25 16:56:36 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@
 # include <stdarg.h>
 # include <string.h>
 # include <unistd.h>
+# include <stdlib.h>
 
 void	ft_putstr(const char *str);
 void	ft_putchar(char c);
+int		isalpha_f(char c);
+int get_nargs(const char *s);
 
 #endif
