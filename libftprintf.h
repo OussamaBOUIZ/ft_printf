@@ -6,7 +6,7 @@
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:56:08 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/25 16:56:36 by obouizga         ###   ########.fr       */
+/*   Updated: 2021/11/25 21:22:53 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@
 void	ft_putstr(const char *str);
 void	ft_putchar(char c);
 int		isalpha_f(char c);
-int get_nargs(const char *s);
-
+int		get_nargs(const char *s);
+void	v_arg_dep(va_list ap, char c);
 #endif
