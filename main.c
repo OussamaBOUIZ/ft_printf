@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   first_arg_trv.c                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 18:29:00 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/25 10:23:15 by obouizga         ###   ########.fr       */
+/*   Created: 2021/11/26 11:31:27 by obouizga          #+#    #+#             */
+/*   Updated: 2021/11/26 18:16:23 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	first_arg_trv(const char *s)
-{
-	char	format;
-	int		i;
 
-	i = 0;
-	while (*s)
-	{
-		if (*s == '%' && isalpha_f(*(s + 1)))
-		{
-			ft_treat(*(s + 1));
-			s++;
-		}
-		ft_putchar(*s);
-		s++;
-	}
+#include "libftprintf.h"
+
+int	main(void)
+{
+	int a = -4586;
+	// printf("%u\n", -4568);
+	// printf("%u\n", (unsigned int)a);
+	ft_putnbr((unsigned int)a);
+	return (0);
 }
 
-
-printf("ljsldfjlj %c")
