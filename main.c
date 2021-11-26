@@ -6,7 +6,7 @@
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 11:31:27 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/26 18:16:23 by obouizga         ###   ########.fr       */
+/*   Updated: 2021/11/26 21:28:27 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 int	main(void)
 {
-	int a = -4586;
-	// printf("%u\n", -4568);
-	// printf("%u\n", (unsigned int)a);
-	ft_putnbr((unsigned int)a);
+	
+	ft_printf("I'm %d years old and my name is %s\n", 21, "oussama");
+	// ft_putnbr_base_u(140732804741208, 0);
+	// printf("\n%lx\n", 140732804741208);
 	return (0);
 }
 

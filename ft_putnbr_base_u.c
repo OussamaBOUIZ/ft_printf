@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_treat.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_base_u.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 11:47:00 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/26 20:52:46 by obouizga         ###   ########.fr       */
+/*   Created: 2021/10/04 09:43:12 by obouizga          #+#    #+#             */
+/*   Updated: 2021/11/26 21:36:12 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_treat(int val, char f)
+
+void	ft_putnbr_base_u(long int nbr, int upper)
 {
-	if (f == 'c')
-		ft_putchar(val);
-	if (f == 'i' || f == 'd')
-		ft_putnbr(val);
-	if (f == 'x')
-		ft_putnbr_base_u(val, 0);
-	if (f == 'X')
-		ft_putnbr_base_u(val, 1);
-	if (f == 'u')
-		ft_putnbr_u(val);
-	if (f == 'p')
-	{
-		ft_putstr("0x");
-		ft_putnbr_base_u(val, 0);
-	}
+	char 	*l_base;
+	char 	*u_base;
+	char	*base;
+	unsigned int u;
+
+	u = (unsigned int)nbr;
+	l_base = "0123456789abcdef";
+	u_base = "0123456789ABCDEF";
+	if (upper)
+		base = u_base;
+	else
+		base = l_base;
+	if (u >= 16)
+		ft_putnbr_base_u(u / 16, upper);
+	ft_putchar(base[u % 16]);
 }

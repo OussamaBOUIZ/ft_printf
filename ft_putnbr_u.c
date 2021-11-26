@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_treat.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_u.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 11:47:00 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/26 20:52:46 by obouizga         ###   ########.fr       */
+/*   Created: 2021/11/26 20:10:49 by obouizga          #+#    #+#             */
+/*   Updated: 2021/11/26 20:28:29 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_treat(int val, char f)
+void	ft_putnbr_u(int b)
 {
-	if (f == 'c')
-		ft_putchar(val);
-	if (f == 'i' || f == 'd')
-		ft_putnbr(val);
-	if (f == 'x')
-		ft_putnbr_base_u(val, 0);
-	if (f == 'X')
-		ft_putnbr_base_u(val, 1);
-	if (f == 'u')
-		ft_putnbr_u(val);
-	if (f == 'p')
+	unsigned int u;
+
+	u = (unsigned int) b;
+	if (u >= 10)
 	{
-		ft_putstr("0x");
-		ft_putnbr_base_u(val, 0);
+		ft_putnbr_u(u / 10);
 	}
+	ft_putchar(u % 10 + '0');
 }
