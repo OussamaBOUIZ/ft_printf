@@ -6,14 +6,14 @@
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:03:06 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/26 11:20:05 by obouizga         ###   ########.fr       */
+/*   Updated: 2021/11/29 17:01:03 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-void	ft_putchar(char c)
+void	ft_putchar(char c, size_t *count)
 {
 	write(1, &c, 1);
+	(*count)++;
 }
-

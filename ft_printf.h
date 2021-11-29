@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:56:08 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/26 20:50:50 by obouizga         ###   ########.fr       */
+/*   Updated: 2021/11/29 18:07:10 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdio.h>
 # include <stdarg.h>
@@ -19,16 +19,14 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-void	ft_putstr(const char *str);
-void	ft_putchar(char c);
+void	ft_putstr(const char *str, size_t *count);
+void	ft_putchar(char c, size_t *count);
 int		isalpha_f(char c);
-int		get_nargs(const char *s);
-void	v_arg_dep(va_list ap, char c);
-void	ft_putnbr_base16(int nbr, int upper);
-void	ft_putnbr(int nb);
-void	ft_printf(const char *format, ...);
-void	ft_treat(int val, char f);
-void	ft_putnbr_u(int b);
-void	ft_putnbr_base_u(long int nbr, int upper);
+void	ft_putnbr_base16(int nbr, int upper, size_t *count);
+void	ft_putnbr(int nb, size_t *count);
+int		ft_printf(const char *format, ...);
+void	ft_treat(int val, char f, size_t *count);
+void	ft_putnbr_u(int b, size_t *count);
+void	ft_putnbr_base_u(unsigned long int u, size_t *count);
 
 #endif

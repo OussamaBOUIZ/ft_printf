@@ -6,27 +6,27 @@
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 11:47:00 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/26 20:52:46 by obouizga         ###   ########.fr       */
+/*   Updated: 2021/11/29 17:13:48 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-void	ft_treat(int val, char f)
+void	ft_treat(int val, char f, size_t *count)
 {
 	if (f == 'c')
-		ft_putchar(val);
+		ft_putchar(val, count);
 	if (f == 'i' || f == 'd')
-		ft_putnbr(val);
+		ft_putnbr(val, count);
 	if (f == 'x')
-		ft_putnbr_base_u(val, 0);
+		ft_putnbr_base_u(val, count);
 	if (f == 'X')
-		ft_putnbr_base_u(val, 1);
+		ft_putnbr_base_u(val, count);
 	if (f == 'u')
-		ft_putnbr_u(val);
+		ft_putnbr_u(val, count);
 	if (f == 'p')
 	{
-		ft_putstr("0x");
-		ft_putnbr_base_u(val, 0);
+		ft_putstr("0x", count);
+		ft_putnbr_base_u(val, count);
 	}
 }

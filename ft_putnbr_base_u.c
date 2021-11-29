@@ -6,28 +6,18 @@
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 09:43:12 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/26 21:36:12 by obouizga         ###   ########.fr       */
+/*   Updated: 2021/11/29 18:06:54 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-
-void	ft_putnbr_base_u(long int nbr, int upper)
+void	ft_putnbr_base_u(unsigned long int u, size_t *count)
 {
-	char 	*l_base;
-	char 	*u_base;
-	char	*base;
-	unsigned int u;
+	char			*base;
 
-	u = (unsigned int)nbr;
-	l_base = "0123456789abcdef";
-	u_base = "0123456789ABCDEF";
-	if (upper)
-		base = u_base;
-	else
-		base = l_base;
+	base = "0123456789abcdef";
 	if (u >= 16)
-		ft_putnbr_base_u(u / 16, upper);
-	ft_putchar(base[u % 16]);
+		ft_putnbr_base_u(u / 16, count);
+	ft_putchar(base[u % 16], count);
 }
