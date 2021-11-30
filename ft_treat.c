@@ -6,7 +6,7 @@
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 11:47:00 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/29 17:13:48 by obouizga         ###   ########.fr       */
+/*   Updated: 2021/11/30 11:27:07 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	ft_treat(int val, char f, size_t *count)
 	if (f == 'i' || f == 'd')
 		ft_putnbr(val, count);
 	if (f == 'x')
-		ft_putnbr_base_u(val, count);
+		putnbr_unsigned(val, count, 0);
 	if (f == 'X')
-		ft_putnbr_base_u(val, count);
+		putnbr_unsigned(val, count, 1);
 	if (f == 'u')
 		ft_putnbr_u(val, count);
 	if (f == 'p')

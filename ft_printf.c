@@ -6,7 +6,7 @@
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 15:17:39 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/29 20:42:22 by obouizga         ###   ########.fr       */
+/*   Updated: 2021/11/30 11:45:11 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ static void	str_ptr_handle(const char *f, va_list ap, size_t *count)
 	if (*(f + 1) == 's')
 	{
 		str = va_arg(ap, char *);
-		ft_putstr(str, count);
+		if (!str)
+			ft_putstr("(null)", count);
+		else
+			ft_putstr(str, count);
 	}
 	else if (*(f + 1) == 'p')
 	{
@@ -46,6 +49,11 @@ int	ft_printf(const char *f, ...)
 				str_ptr_handle(f, ap, &count);
 				f += 2;
 			}
+			else if (*(f + 1) == '%')
+			{
+				ft_putchar(*(f + 1), &count);
+				f+=2;
+			}
 			else 
 			{
 				val = va_arg(ap, int);
@@ -53,8 +61,10 @@ int	ft_printf(const char *f, ...)
 				f += 2;
 			}
 		}
-		ft_putchar(*f, &count);
-		f++;
+		if (!*f)
+			break ;
+		if (*f != '%')
+			ft_putchar(*(f++), &count);
 	}
 	va_end(ap);
 	return (count);
