@@ -6,18 +6,16 @@
 /*   By: obouizga <obouizga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:56:08 by obouizga          #+#    #+#             */
-/*   Updated: 2021/11/30 11:26:43 by obouizga         ###   ########.fr       */
+/*   Updated: 2021/11/30 13:09:02 by obouizga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stdio.h>
 # include <stdarg.h>
 # include <string.h>
 # include <unistd.h>
-# include <stdlib.h>
 
 void	ft_putstr(const char *str, size_t *count);
 void	ft_putchar(char c, size_t *count);
